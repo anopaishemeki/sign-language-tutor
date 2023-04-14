@@ -22,10 +22,10 @@ if (process.env.DATABASE_URL) {
 }
 
 const user = "postgres";
-const host = "localhost";
-const database = "test";
-const port = "5432";
-const password = "root"
+const host = "containers-us-west-174.railway.app";
+const database = "railway";
+const port = "6028";
+const password = "OlmO8XRAyKDG9N2826wt"
 const db = new Sequelize(/*
   process.env.DATABASE_URL || `postgres://localhost:5432/${databaseName}`,
   config*/
