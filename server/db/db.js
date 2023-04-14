@@ -12,7 +12,7 @@ if (process.env.LOGGING === "true") {
     delete config.logging;
 }
 
-//https://stackoverflow.com/questions/61254851/heroku-postgres-sequelize-no-pg-hba-conf-entry-for-host
+
 if (process.env.DATABASE_URL) {
     config.dialectOptions = {
         ssl: {
@@ -22,13 +22,11 @@ if (process.env.DATABASE_URL) {
 }
 
 const user = "postgres";
-const host = "containers-us-west-174.railway.app";
-const database = "railway";
-const port = "6028";
-const password = "OlmO8XRAyKDG9N2826wt"
-const db = new Sequelize(/*
-  process.env.DATABASE_URL || `postgres://localhost:5432/${databaseName}`,
-  config*/
+const host = "localhost";
+const database = "test";
+const port = "5432";
+const password = "root"
+const db = new Sequelize(
     database, user, password, {
         host,
         port,
