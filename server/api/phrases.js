@@ -19,3 +19,4 @@ router.get("/:tierId", async (req, res, next) => {
         next(error);
     }
 });
+
